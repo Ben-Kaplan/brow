@@ -66,4 +66,22 @@ let carArray = [
     }
 ]
 
+let filteredArray = carArray.filter(val => {
+    if (val.year === 1997) {
+        return val
+    }
+})
+
+let secondFilteredArray = filteredArray.filter(val => {
+    if (val.topSpeed >= 160 && val.topSpeed <= 170) {
+        return val;
+    }
+})
+
+let specificFamousOwners = secondFilteredArray.map((val,i,arr) => {
+    return val.famousOwners;
+})
+
+console.log(specificFamousOwners);
+
 

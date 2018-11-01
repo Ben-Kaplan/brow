@@ -49,3 +49,11 @@ const cars = [{
 }]
 
 
+
+let itemOneSales = sales.filter(val => {
+    if (val.itemId === 1) {
+        return val.quantity
+    }
+})
+
+console.log(itemOneSales);

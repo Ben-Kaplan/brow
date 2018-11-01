@@ -92,3 +92,17 @@ let carArray = [
     }
 ]
 
+
+
+
+let topSpeedOfAll = carArray.map((car)=>{
+    return car.topSpeeds.reduce((speed1, speed2)=>{
+        return speed1 > speed2 ? speed1: speed2
+    }).topSpeed
+}).reduce((speed1, speed2)=>{
+    return speed1 > speed2 ? speed1 : speed2
+})
+
+console.log(topSpeedOfAll);
+
+
